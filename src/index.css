@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v11/jizaRExUiTo99u79D0-ExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+body {
+  margin: 0;
+  font-family: 'PTSans-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e9edf2;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} 
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+
+/*
+* Custom css: inbuild
+*/
+.App {
+  padding: 0 0 7% 0;
+}
+.bg-primary {
+  background-color: #015785 !important;
+}
+
+/*
+* Custom css: user defined
+*/
+.pagecenter {
+  padding: 0 10%;
+}
+
+.anz-header .btn-link, .anz-footer .navbar-text {
+  color: #fff;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.pagetitle {
+  padding: 72px 0 0 0; 
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.text-sub-title, .button-outline {
+  color: #004165;
+  font-size: 18px;
+}
+
+.button-outline {
+  border-color: #004165;
+}
+
+.vote-col {
+  flex-grow: 0.5;
+}
+.anz-footer .navbar-text {
+  font-size: 13px;
+}
+.paddingRight20px {
+  padding-right: 20px;
+}
+
+textarea {
+  resize: none;
+}
