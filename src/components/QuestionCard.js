@@ -19,7 +19,9 @@ export default class QuestionCard extends React.Component {
       reference: this.props.reference,
       question: this.props.item.question,
       datetime: this.props.item.datetime,
-      hid: this.props.item.hidden
+      hid: this.props.item.hidden,
+      upv: 0,
+      dov: 0
     };
 
     this.upvote = this.upvote.bind(this);
@@ -30,18 +32,39 @@ export default class QuestionCard extends React.Component {
   }
 
   upvote() {
-    // alert("up");
-    this.setState({
-      upvote: Math.abs(this.state.upvote) + 1
-    });
-    this.update();
+    if(this.state.upv === 0 && this.state.dov === 0) {
+      this.setState({
+        upvote: Math.abs(this.state.upvote) + 1,
+        upv: 1,
+        dov: 0,
+      });
+      this.update();
+    } else if(this.state.dov === 1){
+      this.setState({
+        upvote: Math.abs(this.state.upvote) + 2,
+        upv: 1,
+        dov: 0,
+      });
+      this.update();
+    }
   }
 
   downvote() {
-    this.setState({
-      downvote: Math.abs(this.state.downvote) + 1
-    });
-    this.update();
+    if(this.state.upv === 0 && this.state.dov === 0) {
+      this.setState({
+        downvote: Math.abs(this.state.downvote) + 1,
+        upv: 0,
+        dov: 1
+      });
+      this.update();
+    } else if(this.state.upv === 1) {
+      this.setState({
+        downvote: Math.abs(this.state.downvote) + 2,
+        upv: 0,
+        dov: 1
+      });
+      this.update();
+    }
   }
 
   hideQuestions() {
